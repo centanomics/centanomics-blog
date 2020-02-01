@@ -16,7 +16,6 @@ export default ({ children }) => {
         flex-direction: column;
         justify-content: space-between;
         min-height: 100vh;
-        padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
       `}
     >

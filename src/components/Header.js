@@ -1,5 +1,7 @@
 import React from "react"
+import { css } from "@emotion/core"
 import { useStaticQuery, Link } from "gatsby"
+import { rhythm } from "../utils/typography"
 
 export default () => {
   const {
@@ -17,25 +19,55 @@ export default () => {
       }
     `
   )
+
+  const linkStyles = css`
+    margin: ${rhythm(0.5)};
+  `
+  const siteTitleStyles = css`
+    margin-bottom: 0;
+  `
   return (
-    <header>
+    <header
+      css={css`
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      `}
+    >
       <Link to="/">
-        <h1>{title}</h1>
+        <h1 css={siteTitleStyles}>{title}</h1>
       </Link>
-      <ul>
-        <li>
-          <Link to="about">About</Link>
-        </li>
-        <li>
-          <Link to="projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="blog">Blog</Link>
-        </li>
-        <li>
-          <Link to="contact">Contact</Link>
-        </li>
-      </ul>
+      <nav
+        css={css`
+          display: inline-block;
+        `}
+      >
+        <Link to="about" css={linkStyles}>
+          About
+        </Link>
+        <Link to="projects" css={linkStyles}>
+          Projects
+        </Link>
+        <Link to="blog" css={linkStyles}>
+          Blog
+        </Link>
+        <Link to="contact" css={linkStyles}>
+          Contact
+        </Link>
+      </nav>
     </header>
   )
 }
+
+// const NavLink = ({ to, text }) => {
+//   return (
+//     <Link
+//       to={to}
+//       css={css`
+//         margin: ${rhythm(0.5)};
+//       `}
+//     >
+//       {text}
+//     </Link>
+//   )
+// }
