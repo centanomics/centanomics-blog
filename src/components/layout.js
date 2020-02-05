@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 import Header from "./Header"
 import Footer from "./Footer"
 
-import { rhythm } from "../utils/typography"
+// import { rhythm } from "../utils/typography"
 
 export default ({ children }) => {
   return (
@@ -16,7 +16,6 @@ export default ({ children }) => {
         flex-direction: column;
         justify-content: space-between;
         min-height: 100vh;
-        padding-top: ${rhythm(1.5)};
       `}
     >
       <Header />

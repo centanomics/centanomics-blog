@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import { css } from "@emotion/core"
 
@@ -18,12 +19,15 @@ export default ({ data }) => {
         </header>
         <div>
           {data.allMarkdownRemark.edges.map(({ node }, index) => (
-            <article>
-              <h3>
-                {node.frontmatter.title} <span>- {node.frontmatter.date}</span>
-              </h3>
-              <p>{node.frontmatter.description}</p>
-            </article>
+            <Link to={node.frontmatter.href}>
+              <article>
+                <h3>
+                  {node.frontmatter.title}{" "}
+                  <span>- {node.frontmatter.date}</span>
+                </h3>
+                <p>{node.frontmatter.description}</p>
+              </article>
+            </Link>
           ))}
         </div>
       </section>
@@ -40,8 +44,8 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
             description
+            href
           }
-          excerpt
         }
       }
     }
