@@ -1,10 +1,8 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import Header from "./Header"
-import Footer from "./Footer"
-
-// import { rhythm } from "../utils/typography"
+import Header from "./header"
+import Footer from "./footer"
 
 export default ({ children }) => {
   return (

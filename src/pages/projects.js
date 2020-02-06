@@ -1,13 +1,13 @@
 import React from "react"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 export default () => {
   return (
     <Layout>
-      <SEO title="Projects" description="Find my projects here" />
-      Projects
+      <SEO title="Projects" description="All of Centanomics' Projects" />
+      <div>Hello to my blog</div>
     </Layout>
   )
 }
