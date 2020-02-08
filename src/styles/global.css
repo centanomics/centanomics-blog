@@ -1,0 +1,9 @@
+html {
+  font-family: "Roboto";
+}
+
+header nav a:hover,
+#intro nav a:hover,
+.hoover:hover + p {
+  color: #e3ae96;
+}

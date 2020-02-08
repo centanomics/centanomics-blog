@@ -7,6 +7,8 @@ import Logo from "./logo"
 export default () => {
   const navCSS = css`
     padding: 0 20px;
+    color: black;
+    text-decoration: none;
   `
 
   return (
@@ -33,12 +35,16 @@ export default () => {
           display: inline-block;
         `}
       >
-        <Link to="/about" css={navCSS}>
+        <Link to="/about" css={navCSS} activeStyle={{ color: "#e3ae96" }}>
           About
         </Link>
-        <Link to="/projects" css={navCSS}>
-          Projects
-        </Link>
+        <a
+          href="mailto:centanomics@gmail.com?subject=Hello!"
+          css={navCSS}
+          activeStyle={{ color: "#e3ae96" }}
+        >
+          Contact
+        </a>
       </nav>
     </header>
   )
