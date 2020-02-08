@@ -68,3 +68,20 @@ footer nav a {
     align-items: center;
   }
 }
+
+#footer-span::after {
+  content: "to the right";
+}
+
+footer {
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  #footer-span::after {
+    content: "below";
+  }
+  footer {
+    flex-direction: column;
+  }
+}
