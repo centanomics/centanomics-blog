@@ -7,7 +7,7 @@ export default () => {
   return (
     <Layout>
       <SEO title="Portfolio" description="Home page for my portfolio" />
-      <div>Hello to my portfolio</div>
+      <main>Hello to my portfolio</main>
     </Layout>
   )
 }

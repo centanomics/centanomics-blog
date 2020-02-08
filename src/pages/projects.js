@@ -7,7 +7,7 @@ export default () => {
   return (
     <Layout>
       <SEO title="Projects" description="All of Centanomics' Projects" />
-      <div>Hello to my blog</div>
+      <div>Hello to my projects page</div>
     </Layout>
   )
 }
