@@ -94,8 +94,10 @@ export default ({ data }) => {
                   text-align: center;
                 `}
               >
-                <Link
-                  to={node.fields.slug}
+                <a
+                  href={node.frontmatter.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hoover"
                   css={css`
                     display: block;
@@ -113,7 +115,7 @@ export default ({ data }) => {
                       background-position: center;
                     `}
                   ></div>
-                </Link>
+                </a>
                 <p
                   css={css`
                     margin: 0;
@@ -145,6 +147,7 @@ export const query = graphql`
             image
             startDate(formatString: "MMMM YYYY")
             title
+            repo
           }
           fields {
             slug
