@@ -22,3 +22,29 @@ footer a {
 footer nav a {
   margin-right: 20px;
 }
+
+.current > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.current h2 {
+  text-align: center;
+}
+
+.current a {
+  color: black;
+  padding: 1rem;
+  text-decoration: none;
+  max-width: 200px;
+  min-width: 200px;
+  box-shadow: 0 0 5px #9f9f9f;
+  border-radius: 20px;
+}
+
+.current a span {
+  color: #5e4737;
+  font-weight: bold;
+}
