@@ -1,5 +1,5 @@
 html {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 header nav a:hover,
@@ -60,6 +60,7 @@ footer nav a {
 @media (max-width: 950px) {
   .project-image {
     width: 300px;
+    height: 200px;
   }
 
   #projects > div {
