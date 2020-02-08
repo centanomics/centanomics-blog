@@ -106,14 +106,13 @@ export default ({ data }) => {
                 >
                   <div
                     css={css`
-                      width: 450px;
-                      height: 300px;
                       border-radius: 15px;
                       background: url(${node.frontmatter.image});
                       background-size: cover;
                       background-repeat: no-repeat;
                       background-position: center;
                     `}
+                    className="project-image"
                   ></div>
                 </a>
                 <p
