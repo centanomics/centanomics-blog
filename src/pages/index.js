@@ -62,9 +62,9 @@ export default ({ data }) => {
               margin-top: 1rem;
             `}
           >
-            <Link to="#projects" css={linksCSS}>
+            <a href="#projects" css={linksCSS}>
               View Projects
-            </Link>
+            </a>
             <span
               css={css`
                 color: #9f9f9f;
@@ -93,9 +93,10 @@ export default ({ data }) => {
                 css={css`
                   text-align: center;
                 `}
+                key={index}
               >
                 <a
-                  href={node.frontmatter.repo}
+                  href={node.frontmatter.live}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hoover"
@@ -147,6 +148,7 @@ export const query = graphql`
             startDate(formatString: "MMMM YYYY")
             title
             repo
+            live
           }
           fields {
             slug
