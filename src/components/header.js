@@ -39,9 +39,9 @@ export default () => {
           About
         </Link>
         <a
-          href="mailto:centanomics@gmail.com?subject=Hello!"
+          href="mailto:centanomics@gmail.com"
           css={navCSS}
-          activeStyle={{ color: "#e3ae96" }}
+          activestyle={{ color: "#e3ae96" }}
         >
           Contact
         </a>

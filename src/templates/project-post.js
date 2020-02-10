@@ -9,7 +9,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description="About Centanomics" />
-      <h1>hi</h1>
+      <h1>{post.frontmatter.title}</h1>
     </Layout>
   )
 }
