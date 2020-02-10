@@ -96,7 +96,7 @@ export default ({ data }) => {
                 key={index}
               >
                 <a
-                  href={node.frontmatter.live}
+                  href={node.frontmatter.repo}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hoover"
