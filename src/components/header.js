@@ -12,40 +12,39 @@ export default () => {
   `
 
   return (
-    <header
-      css={css`
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding-top: 2rem;
-      `}
-    >
-      <Link
-        to="/"
+    <div>
+      <header
         css={css`
-          width: 25px;
-          height: 25px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding-top: 2rem;
         `}
+        className="frame"
       >
-        <Logo />
-      </Link>
-      <nav
-        css={css`
-          display: inline-block;
-        `}
-      >
-        <Link to="/about" css={navCSS} activeStyle={{ color: "#e3ae96" }}>
-          About
-        </Link>
-        <a
-          href="mailto:centanomics@gmail.com"
-          css={navCSS}
-          activestyle={{ color: "#e3ae96" }}
+        <Link
+          to="/"
+          css={css`
+            width: 25px;
+            height: 25px;
+          `}
         >
-          Contact
-        </a>
-      </nav>
-    </header>
+          <Logo />
+        </Link>
+        <nav
+          css={css`
+            display: inline-block;
+          `}
+        >
+          <Link to="/about" css={navCSS}>
+            About
+          </Link>
+          <a href="mailto:hello@centanomics.dev?subject=Hi Cent!" css={navCSS}>
+            Contact
+          </a>
+        </nav>
+      </header>
+    </div>
   )
 }

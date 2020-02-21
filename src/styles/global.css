@@ -1,25 +1,50 @@
+:root {
+  --color: #29339b;
+  --opposite: #eac435;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.frame {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 header nav a:hover,
 #intro nav a:hover,
-.hoover:hover + p,
-footer a:hover,
-#oops a:hover {
-  color: #e3ae96;
+.hoover:hover + p {
+  color: var(--color);
+}
+
+.name {
+  color: var(--color);
+  transition: translate;
 }
 
 footer a:hover,
 #oops a:hover {
-  border-bottom-color: #e3ae96;
+  border-bottom-color: var(--opposite);
 }
 
 footer a,
 #oops a {
-  color: black;
-  text-decoration: none;
-  border-bottom: 2px solid black;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+footer {
+  background-color: var(--color);
+  color: #ffffff;
 }
 
 footer nav a {
@@ -40,7 +65,6 @@ footer nav a {
 .current a {
   color: black;
   padding: 1rem;
-  text-decoration: none;
   max-width: 200px;
   min-width: 200px;
   box-shadow: 0 0 5px #9f9f9f;
@@ -48,26 +72,41 @@ footer nav a {
 }
 
 .current a span {
-  color: #5e4737;
+  color: var(--color);
   font-weight: bold;
 }
 
 .project-image {
-  width: 450px;
-  height: 300px;
+  width: 100%;
+  height: 581px;
 }
 
-@media (max-width: 950px) {
+.project {
+  color: #ffffff;
+  padding: 64px 0 0 64px;
+}
+
+.project p {
+  font-weight: bold;
+  font-size: 36px;
+  margin: 5px 0;
+}
+
+.project small:last-child {
+  font-style: italic;
+}
+
+.dark {
+  color: #000000;
+}
+
+/* @media (max-width: 950px) {
   .project-image {
     width: 300px;
     height: 200px;
   }
 
-  #projects > div {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+} */
 
 #footer-span::after {
   content: "to the right";

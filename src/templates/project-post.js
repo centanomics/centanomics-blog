@@ -9,7 +9,10 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description="About Centanomics" />
-      <h1>{post.frontmatter.title}</h1>
+      <div>
+        <h1>{post.frontmatter.title}</h1>
+        <h2>{post.frontmatter.description}</h2>
+      </div>
     </Layout>
   )
 }
@@ -20,6 +23,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
         startDate
       }
     }
