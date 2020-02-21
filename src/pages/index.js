@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
+import { useSpring, animated } from "react-spring"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -11,144 +12,163 @@ export default ({ data }) => {
     color: black;
     text-decoration: none;
   `
+  const [{ size0, size1, size2 }, set] = useSpring(() => ({
+    size0: "100",
+    size1: "100",
+    size2: "100",
+  }))
 
   return (
     <Layout>
       <SEO title="Portfolio" description="Home page for my portfolio" />
-      <main
-        css={css`
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-        `}
-      >
-        <section
-          id="intro"
+      <div>
+        <main
           css={css`
-            margin: 10rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
           `}
+          className="frame"
         >
-          <h2
+          <section
+            id="intro"
             css={css`
-              color: #b2aba4;
-              font-weight: 200;
-              font-size: 2rem;
-              margin: 0;
+              margin: 10rem 0;
             `}
           >
-            Hello, world!
-          </h2>
-          <h1
-            css={css`
-              font-size: 6rem;
-              margin: 0;
-              margin-left: -5px;
-            `}
-          >
-            I'm Cent.
-          </h1>
-          <p
-            css={css`
-              font-size: 1.5rem;
-              margin: 0;
-              color: #5a5956;
-            `}
-          >
-            I am a <span css={{ color: "#5E4737" }}>Full Stack Developer</span>{" "}
-            based in Atlanta, GA{" "}
-          </p>
-          <nav
-            css={css`
-              margin-top: 1rem;
-            `}
-          >
-            <a href="#projects" css={linksCSS}>
-              View Projects
-            </a>
-            <span
+            <h2
               css={css`
-                color: #9f9f9f;
+                color: #b2aba4;
+                font-weight: 200;
+                font-size: 2rem;
+                margin: 0;
               `}
             >
-              {" "}
-              or{" "}
-            </span>
-            <Link to="/about" css={linksCSS}>
-              Read About Me
-            </Link>
-          </nav>
-        </section>
-        <section id="projects">
-          <h1>Projects</h1>
-          <div
-            css={css`
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-              justify-content: space-between;
-            `}
-          >
-            {data.allMarkdownRemark.edges.map(({ node }, index) => (
-              <article
+              Hello, world!
+            </h2>
+            <h1
+              css={css`
+                font-size: 6rem;
+                margin: 0;
+                margin-left: -5px;
+              `}
+            >
+              I'm <span className="name">Cent</span>.
+            </h1>
+            <p
+              css={css`
+                font-size: 1.5rem;
+                margin: 0;
+                color: #000000;
+              `}
+            >
+              I design and develop Full Stack Applications, among other things{" "}
+            </p>
+            <nav
+              css={css`
+                margin-top: 1rem;
+              `}
+            >
+              <a href="#projects" css={linksCSS}>
+                View Projects
+              </a>
+              <span
                 css={css`
-                  text-align: center;
+                  color: #9f9f9f;
                 `}
-                key={index}
               >
-                <a
-                  href={node.frontmatter.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hoover"
+                {" "}
+                or{" "}
+              </span>
+              <Link to="/about" css={linksCSS}>
+                Read About Me
+              </Link>
+            </nav>
+          </section>
+          <section id="projects">
+            <div
+              css={css`
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+              `}
+            >
+              {data.allMarkdownRemark.edges.map(({ node }, index) => (
+                <article
                   css={css`
-                    display: block;
-                    margin: 50px 0 10px;
+                    width: 100%;
                   `}
+                  key={index}
                 >
-                  <div
+                  <Link
+                    to={node.fields.slug}
+                    className="hoover"
                     css={css`
-                      border-radius: 15px;
-                      background: url(${node.frontmatter.image});
-                      background-size: cover;
-                      background-repeat: no-repeat;
-                      background-position: center;
+                      display: block;
+                      margin: 50px 0 10px;
                     `}
-                    className="project-image"
-                  ></div>
-                </a>
-                <p
-                  css={css`
-                    margin: 0;
-                    font-weight: bold;
-                  `}
-                >
-                  {node.frontmatter.title}
-                </p>
-                <small css={{ color: "#b2aba4" }}>
-                  {node.frontmatter.startDate}
-                </small>
-              </article>
-            ))}
-          </div>
-        </section>
-      </main>
+                  >
+                    <animated.div
+                      css={css`
+                        background: url(${node.frontmatter.image});
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                      `}
+                      className="project-image"
+                      onMouseEnter={
+                        index === 0
+                          ? () => set({ size0: "110" })
+                          : index === 1
+                          ? () => set({ size1: "110" })
+                          : () => set({ size2: "110" })
+                      }
+                      onMouseLeave={
+                        index === 0
+                          ? () => set({ size0: "100" })
+                          : index === 1
+                          ? () => set({ size1: "100" })
+                          : () => set({ size2: "100" })
+                      }
+                      style={
+                        index === 0
+                          ? { backgroundSize: size0.interpolate(v => `${v}%`) }
+                          : index === 1
+                          ? { backgroundSize: size1.interpolate(v => `${v}%`) }
+                          : { backgroundSize: size2.interpolate(v => `${v}%`) }
+                      }
+                    >
+                      >
+                      <div className={`project ${node.frontmatter.dark}`}>
+                        <span>{node.frontmatter.description}</span>
+                        <p>{node.frontmatter.title}</p>
+                        <small>{node.frontmatter.startDate}</small>
+                      </div>
+                    </animated.div>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        </main>
+      </div>
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___startDate], order: DESC }
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___index], order: ASC }) {
       edges {
         node {
           frontmatter {
             image
             startDate(formatString: "MMMM YYYY")
             title
-            repo
-            live
+            description
+            dark
           }
           fields {
             slug

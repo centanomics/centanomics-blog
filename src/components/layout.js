@@ -9,7 +9,7 @@ export default ({ children }) => {
     <div
       css={css`
         margin: 0 auto;
-        max-width: 1000px;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
