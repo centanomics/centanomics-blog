@@ -76,6 +76,10 @@ footer nav a {
   font-weight: bold;
 }
 
+.name {
+  color: var(--color);
+}
+
 .project-image {
   width: 100%;
   height: 581px;

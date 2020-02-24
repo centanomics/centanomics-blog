@@ -23,11 +23,11 @@ export default () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="256" cy="256" r="228.5" stroke="black" stroke-width="43" />
+      <circle cx="256" cy="256" r="228.5" stroke="black" strokeWidth="43" />
       <path
         d="M307.5 232.82C307.5 179.82 205 157.82 205 258.32C205 358.82 307.5 326.82 307.5 284.32"
         stroke="black"
-        stroke-width="26"
+        strokeWidth="26"
       />
       <line
         x1="291.487"
@@ -35,8 +35,8 @@ export default () => {
         x2="213.197"
         y2="355.94"
         stroke="black"
-        stroke-width="26"
-        stroke-linecap="round"
+        strokeWidth="26"
+        strokeLinecap="round"
       />
     </svg>
   )
