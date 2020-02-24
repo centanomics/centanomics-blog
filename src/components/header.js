@@ -30,7 +30,7 @@ export default () => {
             height: 25px;
           `}
         >
-          <Logo />
+          <Logo size="25" />
         </Link>
         <nav
           css={css`

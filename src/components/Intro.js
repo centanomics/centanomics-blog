@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import { useTrail, animated } from "react-spring"
 
+import Logo from "./logo"
+
 const Intro = () => {
   const linksCSS = css`
     font-weight: bold;
@@ -11,7 +13,7 @@ const Intro = () => {
   `
 
   const name = ["S", "h", "a", "n", "n", "o", "n"]
-  const nickName = ["C", "e", "n", "t", "", "", ""]
+  const nickName = ["C", "e", "n", "t", " ", " ", " "]
 
   const [toggle, setToggle] = useState(true)
 
@@ -46,93 +48,106 @@ const Intro = () => {
       id="intro"
       css={css`
         margin: 10rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       `}
     >
-      <h2
-        css={css`
-          color: #959595;
-          font-weight: 200;
-          font-size: 2.5rem;
-          margin: 0;
-          margin-bottom: 16px;
-        `}
-      >
-        Hello, world!
-      </h2>
-      <h1
-        css={css`
-          font-size: 6rem;
-          margin: 0;
-          margin-left: -5px;
-        `}
-      >
-        I'm{" "}
-        <span style={{ position: "relative" }}>
-          <span className="nameSpan">
-            {trail.map(({ x, ...rest }, index) => (
-              <animated.div
-                key={index}
-                style={{
-                  transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
-                  ...rest,
-                  color: "var(--color)",
-                  display: "inline-block",
-                }}
-                onClick={onClick}
-              >
-                {name[index]}
-              </animated.div>
-            ))}
-          </span>
-          <span>
-            {trail.map(({ y, opacityX, ...rest }, index) => (
-              <animated.div
-                key={index}
-                style={{
-                  ...rest,
-                  transform: y.interpolate(x => `translate3d(0, ${x}px, 0)`),
-                  opacity: opacityX,
-                  color: "var(--color)",
-                  display: "inline-block",
-                  zIndex: 3,
-                }}
-                onClick={onClick}
-              >
-                {nickName[index]}
-              </animated.div>
-            ))}
-          </span>
-        </span>
-      </h1>
-      <p
-        css={css`
-          font-size: 1.5rem;
-          margin: 0;
-          color: #000000;
-        `}
-      >
-        I design and develop Full Stack Applications{" "}
-      </p>
-      <nav
-        css={css`
-          margin-top: 1rem;
-        `}
-      >
-        <a href="#projects" css={linksCSS}>
-          View Projects
-        </a>
-        <span
+      <div>
+        <h2
           css={css`
-            color: #9f9f9f;
+            color: #959595;
+            font-weight: 200;
+            font-size: 2.5rem;
+            margin: 0;
+            margin-bottom: 16px;
           `}
         >
-          {" "}
-          or{" "}
-        </span>
-        <Link to="/about" css={linksCSS}>
-          Read About Me
-        </Link>
-      </nav>
+          Hello, world!
+        </h2>
+        <h1
+          css={css`
+            font-size: 6rem;
+            margin: 0;
+            margin-left: -5px;
+          `}
+        >
+          I'm{" "}
+          <span style={{ position: "relative" }}>
+            <span className="nameSpan">
+              {trail.map(({ x, ...rest }, index) => (
+                <animated.div
+                  key={index}
+                  style={{
+                    transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
+                    ...rest,
+                    color: "var(--color)",
+                    display: "inline-block",
+                  }}
+                >
+                  {nickName[index]}
+                </animated.div>
+              ))}
+            </span>
+            <span>
+              {trail.map(({ y, opacityX, ...rest }, index) => (
+                <animated.div
+                  key={index}
+                  style={{
+                    transform: y.interpolate(x => `translate3d(0, ${x}px, 0)`),
+                    opacity: opacityX,
+                    color: "var(--color)",
+                    display: "inline-block",
+                  }}
+                >
+                  {name[index]}
+                </animated.div>
+              ))}
+            </span>
+          </span>
+        </h1>
+        <p
+          css={css`
+            font-size: 1.5rem;
+            margin: 0;
+            color: #000000;
+          `}
+        >
+          I design and develop Full Stack Applications{" "}
+        </p>
+        <nav
+          css={css`
+            margin-top: 1rem;
+          `}
+        >
+          <a href="#projects" css={linksCSS}>
+            View Projects
+          </a>
+          <span
+            css={css`
+              color: #9f9f9f;
+            `}
+          >
+            {" "}
+            or{" "}
+          </span>
+          <Link to="/about" css={linksCSS}>
+            Read About Me
+          </Link>
+        </nav>
+      </div>
+      <button
+        onClick={onClick}
+        css={css`
+          margin: 0;
+          padding: 0;
+          background: none;
+          border: none;
+        `}
+      >
+        <Logo size="200px" />
+      </button>
     </section>
   )
 }
