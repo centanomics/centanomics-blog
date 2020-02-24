@@ -9,22 +9,36 @@ const Intro = () => {
     color: black;
     text-decoration: none;
   `
-  const nickname = ["C", "e", "n", "t", "", "", ""]
-  const name = ["S", "h", "a", "n", "n", "o", "n"]
 
-  const [items, setItems] = useState(name)
-  const [trail, set, stop] = useTrail(items.length, () => ({
+  const name = ["S", "h", "a", "n", "n", "o", "n"]
+  const nickName = ["C", "e", "n", "t", "", "", ""]
+
+  const [toggle, setToggle] = useState(true)
+
+  const [trail, set, stop] = useTrail(name.length, () => ({
     opacity: 1,
     x: 0,
+    y: -40,
+    opacityX: 0,
   }))
 
   const onClick = () => {
-    set({ opacity: 0, x: -40 })
+    setToggle(!toggle)
+    if (toggle) {
+      set({ opacity: 0, x: -40 })
 
-    setTimeout(() => {
-      set({ opacity: 1, x: 0 })
-      stop()
-    }, 2000)
+      setTimeout(() => {
+        set({ opacityX: 1, y: 0 })
+        stop()
+      }, 2000)
+    } else {
+      set({ opacityX: 0, y: -40 })
+
+      setTimeout(() => {
+        set({ opacity: 1, x: 0 })
+        stop()
+      }, 2000)
+    }
   }
 
   return (
@@ -36,10 +50,11 @@ const Intro = () => {
     >
       <h2
         css={css`
-          color: #b2aba4;
+          color: #959595;
           font-weight: 200;
-          font-size: 2rem;
+          font-size: 2.5rem;
           margin: 0;
+          margin-bottom: 16px;
         `}
       >
         Hello, world!
@@ -52,20 +67,42 @@ const Intro = () => {
         `}
       >
         I'm{" "}
-        {trail.map(({ x, ...rest }, index) => (
-          <animated.div
-            key={index}
-            style={{
-              transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
-              ...rest,
-              color: "var(--color)",
-              display: "inline-block",
-            }}
-            onClick={onClick}
-          >
-            {items[index]}
-          </animated.div>
-        ))}
+        <span style={{ position: "relative" }}>
+          <span className="nameSpan">
+            {trail.map(({ x, ...rest }, index) => (
+              <animated.div
+                key={index}
+                style={{
+                  transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
+                  ...rest,
+                  color: "var(--color)",
+                  display: "inline-block",
+                }}
+                onClick={onClick}
+              >
+                {name[index]}
+              </animated.div>
+            ))}
+          </span>
+          <span>
+            {trail.map(({ y, opacityX, ...rest }, index) => (
+              <animated.div
+                key={index}
+                style={{
+                  ...rest,
+                  transform: y.interpolate(x => `translate3d(0, ${x}px, 0)`),
+                  opacity: opacityX,
+                  color: "var(--color)",
+                  display: "inline-block",
+                  zIndex: 3,
+                }}
+                onClick={onClick}
+              >
+                {nickName[index]}
+              </animated.div>
+            ))}
+          </span>
+        </span>
       </h1>
       <p
         css={css`
@@ -74,7 +111,7 @@ const Intro = () => {
           color: #000000;
         `}
       >
-        I design and develop Full Stack Applications, among other things{" "}
+        I design and develop Full Stack Applications{" "}
       </p>
       <nav
         css={css`
