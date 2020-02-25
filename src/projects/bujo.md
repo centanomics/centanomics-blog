@@ -6,6 +6,6 @@ dark:
 image: /bujo.jpg
 live: https://secure-woodland-45257.herokuapp.com/
 repo: https://github.com/centanomics/bujo
-description: Future Project
+description: Upcoming Project
 techStack: React, MongoDB, NodeJs, ExpressJs
 ---

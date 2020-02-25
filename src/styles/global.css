@@ -76,6 +76,46 @@ footer nav a {
   font-weight: bold;
 }
 
+.name {
+  color: var(--color);
+}
+
+.nameSpan {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.c {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.photo-hover:hover {
+  animation: 0.5s ease-in-out shake;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .project-image {
   width: 100%;
   height: 581px;
