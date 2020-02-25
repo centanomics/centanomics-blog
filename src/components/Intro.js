@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
-import { useTrail, animated } from "react-spring"
+import { useTrail, animated as a, useSpring } from "react-spring"
 
 import Logo from "./logo"
 
@@ -20,26 +20,34 @@ const Intro = () => {
   const [trail, set, stop] = useTrail(name.length, () => ({
     opacity: 1,
     x: 0,
-    y: -40,
+    y: -100,
     opacityX: 0,
   }))
+
+  const [flipped, flip] = useState(false)
+
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  })
 
   const onClick = () => {
     setToggle(!toggle)
     if (toggle) {
-      set({ opacity: 0, x: -40 })
+      set({ opacity: 0, x: 100 })
 
       setTimeout(() => {
         set({ opacityX: 1, y: 0 })
         stop()
-      }, 2000)
+      }, 0)
     } else {
-      set({ opacityX: 0, y: -40 })
+      set({ opacityX: 0, y: -100 })
 
       setTimeout(() => {
         set({ opacity: 1, x: 0 })
         stop()
-      }, 2000)
+      }, 0)
     }
   }
 
@@ -77,7 +85,7 @@ const Intro = () => {
           <span style={{ position: "relative" }}>
             <span className="nameSpan">
               {trail.map(({ x, ...rest }, index) => (
-                <animated.div
+                <a.div
                   key={index}
                   style={{
                     transform: x.interpolate(x => `translate3d(0, ${x}px, 0)`),
@@ -87,12 +95,12 @@ const Intro = () => {
                   }}
                 >
                   {nickName[index]}
-                </animated.div>
+                </a.div>
               ))}
             </span>
             <span>
               {trail.map(({ y, opacityX, ...rest }, index) => (
-                <animated.div
+                <a.div
                   key={index}
                   style={{
                     transform: y.interpolate(x => `translate3d(0, ${x}px, 0)`),
@@ -102,7 +110,7 @@ const Intro = () => {
                   }}
                 >
                   {name[index]}
-                </animated.div>
+                </a.div>
               ))}
             </span>
           </span>
@@ -138,15 +146,48 @@ const Intro = () => {
         </nav>
       </div>
       <button
-        onClick={onClick}
+        onClick={() => {
+          onClick()
+          flip(!flipped)
+        }}
         css={css`
           margin: 0;
           padding: 0;
           background: none;
           border: none;
+          cursor: pointer;
+          position: relative;
+          width: 200px;
+          height: 200px;
         `}
+        className="photo-hover"
       >
-        <Logo size="200px" />
+        <a.div
+          style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
+          className="c"
+        >
+          <Logo size="200px" />
+        </a.div>
+        <a.div
+          style={{
+            opacity,
+            transform: transform.interpolate(
+              t => `${t} rotateX(180deg) rotate(180deg)`
+            ),
+          }}
+          className="c"
+        >
+          <div
+            css={css`
+              height: 200px;
+              width: 200px;
+              background-image: url("/me.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+              border-radius: 50%;
+            `}
+          ></div>
+        </a.div>
       </button>
     </section>
   )
