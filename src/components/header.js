@@ -37,7 +37,11 @@ export default () => {
             display: inline-block;
           `}
         >
-          <Link to="/about" css={navCSS}>
+          <Link
+            to="/about"
+            css={navCSS}
+            activeStyle={{ color: `var(--color)` }}
+          >
             About
           </Link>
           <a href="mailto:hello@centanomics.dev?subject=Hi Cent!" css={navCSS}>

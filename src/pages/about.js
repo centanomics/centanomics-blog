@@ -14,52 +14,78 @@ export default () => {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            margin-top: 3rem;
+            margin-top: 6rem;
             margin-bottom: 2rem;
           `}
           className="frame"
         >
-          <h1>About Me!</h1>
-          <p css={{ maxWidth: "600px", marginBottom: "3rem" }}>
-            Hi, I'm Shannon Myers, also known as Cent, a full stack developer
-            born and living in the Atlanta Metropolitan Area. I have been coding
-            for 5 years now, with roots robotics, and I am now pursuing a career
-            in web developent.
-            <br />
-            <br />I am an avid language learner, both programming and foreign.
-            In the past I studied Spanish and French in school. Recently, I
-            decided to move on to German and I have plans in the future to
-            tackle Finnish and Russian, in no particular order. While I'm not
-            coding or practicing German, you can usually find me outside
-            walking, listening to a podcast, trying some new food, or playing
-            the occasional League of Legends game. I am always open to trying
-            new things. You can also look at what I'm currently working on with
-            the links below.
-            <br />
-            <br />I was recently enrolled in Full Sail University, learning
-            about a plethora of programming languages, libraries, and
-            frameworks. This is including, but not limited to: HTML, CSS,
-            JavaScript, C#, PHP, React, Node and Express. However, the most
-            important thing I learned was how to learn, allowing me to pick up
-            new technologies easily.
+          <header
+            css={css`
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+            `}
+          >
+            <h1
+              css={css`
+                font-size: 6rem;
+              `}
+            >
+              About Me!
+            </h1>
+            <img
+              src="/me.png"
+              width="200"
+              height="200"
+              alt="a vector portrait of Shannon"
+              style={{ borderRadius: "50%" }}
+            />
+          </header>
+          <p
+            css={css`
+              max-width: "600px";
+              margin-bottom: 2rem;
+              margin-top: 3rem;
+              font-size: 1.5rem;
+              line-height: 2.5rem;
+              max-width: 700px;
+            `}
+          >
+            Hello, I'm Shannon - also known as Cent - a Full Stack Developer
+            with a year of experience based in the Atlanta Area. I enjoy taking
+            ideas and bringing them to life through robust web applications.
+            Currently, I'm working towards getting a junior developer role and
+            further advancing my current skills. Offline, I like to learn
+            foreign languages, participate in tea ceremonies, and hike. You can
+            also check out the links in the next section to see what I'm up to
+            currently - code related or not.
           </p>
           <section className="current">
-            <h2>What I'm currently doing.</h2>
+            <h2>What I'm Up To</h2>
             <div>
               <a href="https://courses.dcs.wisc.edu/wp/readinggerman/">
-                <div>
-                  <span>Learning</span> German through an online textbook
-                </div>
+                <div>Currently Learning:</div>
+                <span>German,</span> thanks to an online textbook.
               </a>
               <a href="https://bulletjournal.com/">
-                <div>
-                  <span>Building</span> an application based off the Bujo Method
-                </div>
+                <div>Currently Building:</div>
+                <span>Bujo,</span> an application based off the Bujo Method.
               </a>
               <a href="https://www.ladybug.dev/">
-                <div>
-                  <span>Listening</span> to the Ladybug Podcast
-                </div>
+                <div>Currently Listening to:</div>
+                <span>The CodeNewbie Podcast,</span> a podcast about people from
+                all stages of their coding journey.
+              </a>
+              <a href="https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/">
+                <div>Cureently Completing:</div>
+                <span>Project Euler,</span> a series of challenging
+                mathematical/computer programming problems.
+              </a>
+              <a href="https://www.stardewvalley.net/">
+                <div>Currently Playing:</div>
+                <span>Stardew Valley,</span> a simple game about escaping from
+                modern life.
               </a>
             </div>
           </section>
