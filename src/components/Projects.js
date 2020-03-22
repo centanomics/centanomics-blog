@@ -15,7 +15,7 @@ const Projects = () => {
                 startDate(formatString: "MMMM YYYY")
                 title
                 description
-                dark
+                repo
               }
               fields {
                 slug

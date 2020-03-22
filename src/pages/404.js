@@ -17,7 +17,14 @@ export default () => {
       >
         <h1>Something went wrong.</h1>
 
-        <Link to="/">Get back to saftey</Link>
+        <Link
+          to="/"
+          css={css`
+            color: black;
+          `}
+        >
+          Get back to saftey
+        </Link>
       </main>
     </Layout>
   )

@@ -5,6 +5,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -55,25 +56,39 @@ footer nav a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .current h2 {
-  text-align: center;
+  font-size: 3rem;
 }
 
 .current a {
   color: black;
+  display: block;
   padding: 1rem;
-  max-width: 200px;
-  min-width: 200px;
-  box-shadow: 0 0 5px #9f9f9f;
-  border-radius: 20px;
+  margin: 1.5rem 5rem 1.5rem 0rem;
+  width: 300px;
+  box-shadow: 0 0 2px #9f9f9f;
+  transition: transform 0.25s ease;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  border-radius: 15px;
+}
+
+.current a:hover {
+  transform: scale(1.05);
 }
 
 .current a span {
-  color: var(--color);
   font-weight: bold;
+}
+
+.current a div {
+  font-weight: bold;
+  color: var(--color);
+  margin-bottom: 0.5rem;
 }
 
 .name {
@@ -140,13 +155,17 @@ footer nav a {
   color: #000000;
 }
 
-/* @media (max-width: 950px) {
-  .project-image {
-    width: 300px;
-    height: 200px;
-  }
-
+/* .project-article {
 } */
+
+.project-article p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.project-article h3 {
+  font-size: 2rem;
+}
 
 #footer-span::after {
   content: "to the right";
