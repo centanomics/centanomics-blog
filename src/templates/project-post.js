@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { css } from "@emotion/core"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link } from "gatsby"
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -14,11 +14,28 @@ export default ({ data }) => {
         description={`Description page for the ${post.frontmatter.title} project`}
       />
       <div>
-        <Link to="/">Back</Link>
         <main className="frame">
-          <h1>{post.frontmatter.title}</h1>
-          <h2>{post.frontmatter.startDate}</h2>
-          <article dangerouslySetInnerHTML={{ __html: post.html }} />
+          <header
+            css={css`
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              font-size: 2rem;
+            `}
+          >
+            <h1>{post.frontmatter.title}</h1>
+            <h2
+              css={css`
+                padding-left: 8px;
+              `}
+            >
+              - {post.frontmatter.startDate}
+            </h2>
+          </header>
+          <article
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            className="project-article"
+          />
           <div>
             <a href={post.frontmatter.repo}>Repo</a>
             <a href={post.frontmatter.live}>Live Site</a>
@@ -35,8 +52,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        description
-        startDate
+        startDate(formatString: "MMMM YYYY")
         live
         repo
       }

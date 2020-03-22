@@ -1,12 +1,12 @@
 ---
 
 index: 2
-title: Adoption Central
+title: Portfolio
 startDate: "2019-01-01"
-dark: dark
-image: /adoptioncentral.jpg
-live: https://centanomics.github.io/project5/#/
-repo: https://github.com/centanomics/project5
+dark:
+image: /portfolio.jpg
+live: https://centanomics.dev
+repo: https://github.com/centanomics/centanomics-blog
 description: 
 
 ---
