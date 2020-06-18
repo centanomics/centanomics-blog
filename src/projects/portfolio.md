@@ -2,7 +2,7 @@
 
 index: 2
 title: Portfolio
-startDate: "2019-01-01"
+startDate: "2020-02-01"
 dark:
 image: /portfolio.jpg
 live: https://centanomics.dev
@@ -11,17 +11,13 @@ description:
 
 ---
 
-This project is an adoption website for pets that focuses on the shelters themselves. By entering in the zipcode and name of a shelter you can find shelters near you and see what kind of pets each shelter has.
+I decided to highlight my portfolio because for this project, I wanted to learn Gatsby. I also wanted to practice some animations using React Spring which I sprinkled throughout this project!
 
 ### Tech Stack
 
-For this project I used the MERN stack, more specifically:
+For this project I used Gatsby as my static site generator. This includes React and GraphQL.
 
 - [React](https://reactjs.org/)
-- [Node.js](https://nodejs.org/)
-- [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Mongoose](https://mongoosejs.com/)
-- and various npm packages that aided in security, including:
-  - [bcrypt.js](https://www.npmjs.com/package/bcryptjs)
-  - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- [Gatsby](https://www.gatsbyjs.org/)
+- [Graph-ql](https://graphql.org/)
+- [React Spring](https://www.react-spring.io/)

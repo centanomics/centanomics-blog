@@ -30,7 +30,7 @@ export default () => {
             height: 25px;
           `}
         >
-          <Logo size="25" />
+          <Logo size="25" color="black" />
         </Link>
         <nav
           css={css`
@@ -44,7 +44,7 @@ export default () => {
           >
             About
           </Link>
-          <a href="mailto:hello@centanomics.dev?subject=Hi Cent!" css={navCSS}>
+          <a href="mailto:centanomics@gmail.com?subject=Hi Cent!" css={navCSS}>
             Contact
           </a>
         </nav>
