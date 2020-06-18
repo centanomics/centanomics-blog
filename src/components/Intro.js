@@ -12,8 +12,8 @@ const Intro = () => {
     text-decoration: none;
   `
 
-  const name = ["S", "h", "a", "n", "n", "o", "n"]
-  const nickName = ["C", "e", "n", "t", " ", " ", " "]
+  const nickName = ["S", "h", "a", "n", "n", "o", "n"]
+  const name = ["C", "e", "n", "t", " ", " ", " "]
 
   const [toggle, setToggle] = useState(true)
 
@@ -24,7 +24,7 @@ const Intro = () => {
     opacityX: 0,
   }))
 
-  const [flipped, flip] = useState(false)
+  const [flipped, flip] = useState(true)
 
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -166,7 +166,7 @@ const Intro = () => {
           style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
           className="c"
         >
-          <Logo size="200px" />
+          <Logo size="200px" color="black" />
         </a.div>
         <a.div
           style={{

@@ -39,8 +39,8 @@ export default () => {
         <div>
           <p>Want to contact me about something?</p>
           <p>
-            <a href="mailto:hello@centanomics.dev?subject=Hi Cent!" id="email">
-              hello@centanomics.dev
+            <a href="mailto:centanomics@gmail.com?subject=Hi Cent!" id="email">
+              centanomics@gmail.com
             </a>
           </p>
           <p>Find me on</p>
