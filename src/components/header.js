@@ -44,6 +44,13 @@ export default () => {
           >
             About
           </Link>
+          <a
+            href="https://dailytwocents.dev"
+            css={navCSS}
+            activeStyle={{ color: `var(--color)` }}
+          >
+            Blog
+          </a>
           <a href="mailto:centanomics@gmail.com?subject=Hi Cent!" css={navCSS}>
             Contact
           </a>
