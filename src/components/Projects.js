@@ -16,6 +16,7 @@ const Projects = () => {
                 title
                 description
                 repo
+                dark
               }
               fields {
                 slug
@@ -27,10 +28,11 @@ const Projects = () => {
     `
   )
 
-  const [{ size0, size1, size2 }, set] = useSpring(() => ({
-    size0: "100",
+  const [{ size0, size1, size2, size3 }, set] = useSpring(() => ({
+    size0: "110",
     size1: "100",
     size2: "100",
+    size3: "100",
   }))
 
   return (
@@ -72,24 +74,30 @@ const Projects = () => {
                   className="project-image"
                   onMouseEnter={
                     index === 0
-                      ? () => set({ size0: "110" })
+                      ? () => set({ size0: "120" })
                       : index === 1
                       ? () => set({ size1: "110" })
-                      : () => set({ size2: "110" })
+                      : index === 2
+                      ? () => set({ size2: "110" })
+                      : () => set({ size3: "110" })
                   }
                   onMouseLeave={
                     index === 0
-                      ? () => set({ size0: "100" })
+                      ? () => set({ size0: "110" })
                       : index === 1
                       ? () => set({ size1: "100" })
-                      : () => set({ size2: "100" })
+                      : index === 2
+                      ? () => set({ size2: "100" })
+                      : () => set({ size3: "100" })
                   }
                   style={
                     index === 0
                       ? { backgroundSize: size0.interpolate(v => `${v}%`) }
                       : index === 1
                       ? { backgroundSize: size1.interpolate(v => `${v}%`) }
-                      : { backgroundSize: size2.interpolate(v => `${v}%`) }
+                      : index === 2
+                      ? { backgroundSize: size2.interpolate(v => `${v}%`) }
+                      : { backgroundSize: size3.interpolate(v => `${v}%`) }
                   }
                 >
                   <div className={`project ${node.frontmatter.dark}`}>
