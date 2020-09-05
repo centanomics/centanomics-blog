@@ -26,7 +26,7 @@ export default () => {
         >
           <p>
             Thanks for scrolling to the end of this page. If you want get to
-            know me more, check out the links <span id="footer-span"></span>.
+            know me more, check out the links<span id="footer-span"></span>.
           </p>
           <p>
             Also, feel free to check{" "}
