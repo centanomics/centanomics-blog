@@ -70,3 +70,6 @@ yarn-error.log
 
 # Extra stuff
 unused-pages/
+
+# Local Netlify folder
+.netlify
