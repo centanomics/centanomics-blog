@@ -4,7 +4,7 @@ index: 1
 title: Penny
 startDate: "2020-06-11"
 dark:
-image: /contactkeeper.jpg
+image: /penny.jpg
 live: https://penny.centanomics.repl.co/
 repo: https://github.com/centanomics/Penny
 description: Featured Project
