@@ -23,6 +23,16 @@ export default ({ data }) => {
               font-size: 2rem;
             `}
           >
+            <img
+              src={post.frontmatter.image}
+              alt={`${post.frontmatter.title} cover`}
+              css={css`
+                display: block;
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+              `}
+            />
             <h1>{post.frontmatter.title}</h1>
             <h2
               css={css`
@@ -55,6 +65,7 @@ export const query = graphql`
         startDate(formatString: "MMMM YYYY")
         live
         repo
+        image
       }
     }
   }
