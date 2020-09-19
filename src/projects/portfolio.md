@@ -11,7 +11,7 @@ description:
 
 ---
 
-I decided to highlight my portfolio because for this project, I wanted to learn Gatsby. I also wanted to practice some animations using React Spring which I sprinkled throughout this project!
+This project I focused on learning gatsby. I implemented what I learned in the tutorual on the website. I also wanted to practice some animations using React Spring which I sprinkled throughout this project!
 
 ### Tech Stack
 
