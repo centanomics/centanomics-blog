@@ -14,7 +14,7 @@ export default ({ data }) => {
         description={`Description page for the ${post.frontmatter.title} project`}
       />
       <div>
-        <main className="frame">
+        <main className="frame article">
           <header
             css={css`
               display: flex;

@@ -183,3 +183,27 @@ footer {
     flex-direction: column;
   }
 }
+
+/*
+Article page css
+*/
+
+.article {
+  margin-top: 32px;
+}
+
+.article img {
+  border-radius: 10px 10px 0 0;
+}
+
+.article > header,
+.article > article,
+.article > div {
+  background-color: #eff0fb;
+}
+
+.article h1,
+.article h2,
+.article p {
+  margin: 0;
+}
