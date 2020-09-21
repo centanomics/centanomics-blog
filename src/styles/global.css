@@ -190,6 +190,7 @@ Article page css
 
 .article {
   margin-top: 32px;
+  font-size: 10px;
 }
 
 .article img {
@@ -204,6 +205,7 @@ Article page css
 
 .article h1,
 .article h2,
-.article p {
+.article p,
+.article ul {
   margin: 0;
 }
