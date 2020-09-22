@@ -190,7 +190,9 @@ Article page css
 
 .article {
   margin-top: 32px;
-  font-size: 10px;
+}
+article {
+  padding: 10px;
 }
 
 .article img {
