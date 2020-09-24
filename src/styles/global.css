@@ -191,9 +191,6 @@ Article page css
 .article {
   margin-top: 32px;
 }
-article {
-  padding: 10px;
-}
 
 .article img {
   border-radius: 10px 10px 0 0;
@@ -203,6 +200,12 @@ article {
 .article > article,
 .article > div {
   background-color: #eff0fb;
+}
+
+.article h1,
+.article > div,
+.article > article {
+  padding: 0 16px;
 }
 
 .article h1,
