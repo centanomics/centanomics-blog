@@ -23,6 +23,13 @@ export default ({ data }) => {
               font-size: 2rem;
             `}
           >
+            <a href={post.frontmatter.repo} css={css`
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: none;
+          `}>
             <img
               src={post.frontmatter.image}
               alt={`${post.frontmatter.title} cover`}
@@ -32,7 +39,8 @@ export default ({ data }) => {
                 height: 300px;
                 object-fit: cover;
               `}
-            />
+              />
+              </a>
             <h1>{post.frontmatter.title}</h1>
             <h2
               css={css`
@@ -46,9 +54,12 @@ export default ({ data }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             className="project-article"
           />
-          <div>
-            <a href={post.frontmatter.repo}>Repo</a>
-            <a href={post.frontmatter.live}>Live Site</a>
+          <div className="live-site">
+            <p>
+              Click{' '}
+              <a href={post.frontmatter.live}>here</a>
+              {' '}to see the site in action!
+            </p> 
           </div>
         </main>
       </div>

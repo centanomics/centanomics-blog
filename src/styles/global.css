@@ -192,6 +192,17 @@ Article page css
   margin-top: 32px;
 }
 
+.article article a,
+.live-site a {
+  color: black;
+  border-bottom: 2px solid #000;
+}
+
+.article article a:hover,
+.live-site a:hover {
+  border-bottom-color: var(--opposite);
+}
+
 .article img {
   border-radius: 10px 10px 0 0;
 }
@@ -205,7 +216,7 @@ Article page css
 .article h1,
 .article > div,
 .article > article {
-  padding: 0 16px;
+  padding: 32px 16px;
 }
 
 .article h1,
@@ -213,4 +224,12 @@ Article page css
 .article p,
 .article ul {
   margin: 0;
+}
+
+.project-article {
+  padding-bottom: 32px;
+}
+
+.live-site {
+  font-size: 30px;
 }
