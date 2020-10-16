@@ -11,7 +11,7 @@ description: Repl.it MMO Hackathon Submission
 
 ---
 
-I decided to highlight my portfolio because for this project, I wanted to learn Gatsby. I also wanted to practice some animations using React Spring which I sprinkled throughout this project!
+This was a project I worked on with two other people for a Hackathon back in December. There was no real theme, just make an application, and we decided to go for a cookie clicker game, but we made it multiplayer. Anyone who had the link to the site could join and start clicking on the screen to earn cookies towards a goal. There are general stats for you to see and there is also a chatroom to talk with other clickers! It was all in all an enjoyable experience creating this application despite not getting a top stop in the Hackathon.
 
 ### Tech Stack
 

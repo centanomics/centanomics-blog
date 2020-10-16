@@ -14,7 +14,7 @@ export default ({ data }) => {
         description={`Description page for the ${post.frontmatter.title} project`}
       />
       <div>
-        <main className="frame">
+        <main className="frame article">
           <header
             css={css`
               display: flex;
@@ -23,6 +23,24 @@ export default ({ data }) => {
               font-size: 2rem;
             `}
           >
+            <a href={post.frontmatter.repo} css={css`
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: none;
+          `}>
+            <img
+              src={post.frontmatter.image}
+              alt={`${post.frontmatter.title} cover`}
+              css={css`
+                display: block;
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+              `}
+              />
+              </a>
             <h1>{post.frontmatter.title}</h1>
             <h2
               css={css`
@@ -36,9 +54,12 @@ export default ({ data }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             className="project-article"
           />
-          <div>
-            <a href={post.frontmatter.repo}>Repo</a>
-            <a href={post.frontmatter.live}>Live Site</a>
+          <div className="live-site">
+            <p>
+              Click{' '}
+              <a href={post.frontmatter.live}>here</a>
+              {' '}to see the site in action!
+            </p> 
           </div>
         </main>
       </div>
@@ -55,6 +76,7 @@ export const query = graphql`
         startDate(formatString: "MMMM YYYY")
         live
         repo
+        image
       }
     }
   }

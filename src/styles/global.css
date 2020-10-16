@@ -183,3 +183,53 @@ footer {
     flex-direction: column;
   }
 }
+
+/* 
+Article page css
+*/
+
+.article {
+  margin-top: 32px;
+}
+
+.article article a,
+.live-site a {
+  color: black;
+  border-bottom: 2px solid #000;
+}
+
+.article article a:hover,
+.live-site a:hover {
+  border-bottom-color: var(--opposite);
+}
+
+.article img {
+  border-radius: 10px 10px 0 0;
+}
+
+.article > header,
+.article > article,
+.article > div {
+  background-color: #eff0fb;
+}
+
+.article h1,
+.article > div,
+.article > article {
+  padding: 32px 16px;
+}
+
+.article h1,
+.article h2,
+.article p,
+.article ul {
+  margin: 0;
+}
+
+.project-article {
+  padding-bottom: 32px;
+}
+
+.live-site {
+  font-size: 30px;
+}

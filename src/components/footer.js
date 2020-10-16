@@ -6,7 +6,6 @@ export default () => {
     <div
       css={css`
         background-color: var(--color);
-        margin-top: 64px;
       `}
     >
       <footer
@@ -50,6 +49,7 @@ export default () => {
             </a>
             <a href="https://github.com/centanomics">Github</a>
             <a href="https://twitter.com/centanomics">Twitter</a>
+            <a href="https://dev.to/centanomics">Dev.to</a>
           </nav>
         </div>
       </footer>

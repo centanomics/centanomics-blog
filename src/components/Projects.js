@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { css } from "@emotion/core"
 import { useSpring, animated } from "react-spring"
 
@@ -44,6 +44,7 @@ const Projects = () => {
           flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
+          margin-bottom: 64px;
         `}
       >
         {data.allMarkdownRemark.edges.map(({ node }, index) => {
@@ -54,14 +55,15 @@ const Projects = () => {
               `}
               key={index}
             >
-              <a
-                href={node.frontmatter.repo}
+              <Link
+                to={`/${node.fields.slug}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hoover"
                 css={css`
                   display: block;
                   margin: 50px 0 10px;
+                  margin-bottom: 0;
                 `}
               >
                 <animated.div
@@ -106,7 +108,7 @@ const Projects = () => {
                     <small>{node.frontmatter.startDate}</small>
                   </div>
                 </animated.div>
-              </a>
+              </Link>
             </article>
           )
         })}

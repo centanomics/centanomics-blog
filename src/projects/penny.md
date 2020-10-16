@@ -4,14 +4,14 @@ index: 1
 title: Penny
 startDate: "2020-06-11"
 dark:
-image: /contactkeeper.jpg
+image: /penny.jpg
 live: https://penny.centanomics.repl.co/
 repo: https://github.com/centanomics/Penny
 description: Featured Project
 
 ---
 
-Contact Keeper is a Full Stack Application that keeps track of any contacts that you add to your account. Users are able to add contacts as they please to a filterable list, where they can search by name or email. They also can edit their contacts in case of a mistake, or just delete their contacts. Users will need to login to use the application with their contacts matching with their account only.
+Penny is my discord bot that I made using javascript and the discordjs node module. It's something that I will always work on and continually adding functionality to. As of writing this description, the bot can handle basic moderator duties and a few other fun commands like flipping a coin or creating bets with the fellow server members. A point of focus is also creating clubs that you can join and even ping if you need to down the line!
 
 ### Tech Stack
 
