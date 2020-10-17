@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default ({ data }) => {
+export default ({ data, location }) => {
   const post = data.markdownRemark
 
   return (
@@ -14,6 +14,7 @@ export default ({ data }) => {
         description={`Description page for the ${post.frontmatter.title} project`}
       />
       <div>
+        <button onClick={() => window.history.back()}>{'<'} Go Back</button>
         <main className="frame article">
           <header
             css={css`
