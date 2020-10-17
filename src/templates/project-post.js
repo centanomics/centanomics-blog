@@ -14,8 +14,12 @@ export default ({ data, location }) => {
         description={`Description page for the ${post.frontmatter.title} project`}
       />
       <div>
-        <button onClick={() => window.history.back()}>{'<'} Go Back</button>
+        
         <main className="frame article">
+          <button onClick={() => window.history.back()} css={css`
+            display: block;
+            position: sticky;
+          `}>{'<'} Go Back</button>
           <header
             css={css`
               display: flex;

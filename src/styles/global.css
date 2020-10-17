@@ -190,6 +190,7 @@ Article page css
 
 .article {
   margin-top: 32px;
+  position: relative;
 }
 
 .article article a,
