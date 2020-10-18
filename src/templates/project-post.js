@@ -19,7 +19,7 @@ export default ({ data, location }) => {
           <button onClick={() => window.history.back()} css={css`
             display: block;
             position: sticky;
-          `}>{'<'} Go Back</button>
+          `}>{'<'}</button>
           <header
             css={css`
               display: flex;
