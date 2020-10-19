@@ -136,6 +136,10 @@ footer nav a {
   height: 581px;
 }
 
+.back-button {
+  color: #ffffff;
+}
+
 .project {
   color: #ffffff;
   padding: 64px 0 0 64px;

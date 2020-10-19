@@ -16,25 +16,27 @@ export default ({ data, location }) => {
       <div>
         
         <main className="frame article">
-          <button onClick={() => window.history.back()} css={css`
-            display: block;
-            position: sticky;
-          `}>{'<'}</button>
+          
           <header
             css={css`
               display: flex;
               flex-wrap: wrap;
               align-items: center;
               font-size: 2rem;
+              position: relative;
             `}
-          >
-            <a href={post.frontmatter.repo} css={css`
-            display: block;
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-bottom: none;
-          `}>
+          > 
+          <button onClick={() => window.history.back()} css={css`
+            border: none;
+            background: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            padding: 8px;
+          `}
+          className={`back-button ${post.frontmatter.dark}`}
+          >{'<'} Go Back</button>
             <img
               src={post.frontmatter.image}
               alt={`${post.frontmatter.title} cover`}
@@ -45,7 +47,6 @@ export default ({ data, location }) => {
                 object-fit: cover;
               `}
               />
-              </a>
             <h1>{post.frontmatter.title}</h1>
             <h2
               css={css`
@@ -82,6 +83,7 @@ export const query = graphql`
         live
         repo
         image
+        dark
       }
     }
   }
