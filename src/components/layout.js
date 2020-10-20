@@ -1,5 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
+import ScrollUpButton from 'react-scroll-up-button'
 
 import Header from "./header"
 import Footer from "./footer"
@@ -19,6 +20,7 @@ export default ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <ScrollUpButton />
     </div>
   )
 }

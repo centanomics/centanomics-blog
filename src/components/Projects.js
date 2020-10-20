@@ -56,9 +56,7 @@ const Projects = () => {
               key={index}
             >
               <Link
-                to={`/${node.fields.slug}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                to={`${node.fields.slug}`}
                 className="hoover"
                 css={css`
                   display: block;
