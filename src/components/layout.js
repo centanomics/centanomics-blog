@@ -5,6 +5,12 @@ import ScrollUpButton from 'react-scroll-up-button'
 import Header from "./header"
 import Footer from "./footer"
 
+const MyCustomReactComponent = () => {
+  return (
+    <div>Go Back Up</div>
+  )
+}
+
 export default ({ children }) => {
   return (
     <div
@@ -20,7 +26,12 @@ export default ({ children }) => {
       <Header />
       {children}
       <Footer />
-      <ScrollUpButton />
+      <ScrollUpButton
+        ContainerClassName='AnyClassForContainer'
+        TransitionClassName='AnyClassForTransition'
+      >
+        <MyCustomReactComponent />
+      </ScrollUpButton>
     </div>
   )
 }

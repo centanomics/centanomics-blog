@@ -238,3 +238,17 @@ Article page css
 .live-site {
   font-size: 30px;
 }
+
+.AnyClassForContainer {
+  position: fixed;
+  right: -200px;
+  bottom: 10px;
+  transition: right 0.5s;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.AnyClassForTransition {
+  right: 10px;
+}

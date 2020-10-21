@@ -48,6 +48,7 @@ const Projects = () => {
         `}
       >
         {data.allMarkdownRemark.edges.map(({ node }, index) => {
+          console.log(node.fields.slug)
           return (
             <article
               css={css`

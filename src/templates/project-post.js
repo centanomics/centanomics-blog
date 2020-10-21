@@ -24,6 +24,7 @@ export default ({ data, location }) => {
               align-items: center;
               font-size: 2rem;
               position: relative;
+              border-radius: 10px 10px 0 0;
             `}
           > 
           <button onClick={() => window.history.back()} css={css`

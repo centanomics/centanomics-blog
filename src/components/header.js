@@ -40,14 +40,14 @@ export default () => {
           <Link
             to="/about"
             css={navCSS}
-            activeStyle={{ color: `var(--color)` }}
+            activestyle={{ color: `var(--color)` }}
           >
             About
           </Link>
           <a
             href="https://dailytwocents.dev"
             css={navCSS}
-            activeStyle={{ color: `var(--color)` }}
+            activestyle={{ color: `var(--color)` }}
           >
             Blog
           </a>
