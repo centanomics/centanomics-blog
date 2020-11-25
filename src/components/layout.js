@@ -1,13 +1,16 @@
 import React from "react"
 import { css } from "@emotion/core"
 import ScrollUpButton from 'react-scroll-up-button'
+import { FaArrowUp } from 'react-icons/fa'
 
 import Header from "./header"
 import Footer from "./footer"
 
 const MyCustomReactComponent = () => {
   return (
-    <div>Go Back Up</div>
+    <div><FaArrowUp css={css`
+      color: #eac435
+    `} /></div>
   )
 }
 

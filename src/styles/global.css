@@ -54,7 +54,7 @@ footer nav a {
 
 /* about page css */
 
-/* .current > div {
+.current > div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -91,7 +91,7 @@ footer nav a {
   font-weight: bold;
   color: var(--color);
   margin-bottom: 0.5rem;
-} */
+}
 
 .name {
   color: var(--color);

@@ -22,7 +22,7 @@ export default () => {
           <header
             css={css`
               display: flex;
-              flex-direction: row;
+              flex-direction: column-reverse;
               justify-content: space-between;
               align-items: center;
             `}
