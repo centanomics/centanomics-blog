@@ -45,8 +45,7 @@ export default () => {
           <p
             css={css`
               max-width: "600px";
-              margin-bottom: 2rem;
-              margin-top: 3rem;
+              margin: 2rem auto;
               font-size: 1.5rem;
               line-height: 2.5rem;
               max-width: 700px;
@@ -62,7 +61,7 @@ export default () => {
             currently - code related or not.
           </p>
           <section className="current">
-            <h2>What I'm Up To</h2>
+            <h2>What I'm Up To:</h2>
             <ul>
               <a href="https://courses.dcs.wisc.edu/wp/readinggerman/">
                 <div>Currently Learning:</div>
