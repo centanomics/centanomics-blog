@@ -62,7 +62,7 @@ export default () => {
           </p>
           <section className="current">
             <h2>What I'm Up To:</h2>
-            <ul>
+            <div>
               <a href="https://courses.dcs.wisc.edu/wp/readinggerman/">
                 <div>Currently Learning:</div>
                 <span>German,</span> thanks to an online textbook.
@@ -86,7 +86,7 @@ export default () => {
                 <span>Stardew Valley,</span> a simple game about escaping from
                 modern life.
               </a>
-            </ul>
+            </div>
           </section>
         </main>
       </div>

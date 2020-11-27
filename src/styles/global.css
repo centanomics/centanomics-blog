@@ -58,8 +58,7 @@ footer nav a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
 }
 
 .current h2 {
