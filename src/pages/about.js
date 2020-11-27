@@ -62,31 +62,41 @@ export default () => {
           </p>
           <section className="current">
             <h2>What I'm Up To:</h2>
-            <div>
-              <a href="https://courses.dcs.wisc.edu/wp/readinggerman/">
-                <div>Currently Learning:</div>
-                <span>German,</span> thanks to an online textbook.
-              </a>
-              <a href="https://bulletjournal.com/">
-                <div>Currently Building:</div>
-                <span>Bujo,</span> an application based off the Bujo Method.
-              </a>
-              <a href="https://www.ladybug.dev/">
-                <div>Currently Listening to:</div>
-                <span>The CodeNewbie Podcast,</span> a podcast about people from
-                all stages of their coding journey.
-              </a>
-              <a href="https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/">
-                <div>Cureently Completing:</div>
-                <span>Project Euler,</span> a series of challenging
-                mathematical/computer programming problems.
-              </a>
-              <a href="https://www.stardewvalley.net/">
-                <div>Currently Playing:</div>
-                <span>Stardew Valley,</span> a simple game about escaping from
-                modern life.
-              </a>
-            </div>
+            <ul>
+              <li>
+                <a href="https://courses.dcs.wisc.edu/wp/readinggerman/">
+                  <div>Currently Learning:</div>
+                  <span>German,</span> thanks to an online textbook.
+                </a>
+              </li>
+              <li>
+                <a href="https://bulletjournal.com/">
+                  <div>Currently Building:</div>
+                  <span>Bujo,</span> an application based off the Bujo Method.
+                </a>
+              </li>
+              <li>
+                <a href="https://www.ladybug.dev/">
+                  <div>Currently Listening to:</div>
+                  <span>The CodeNewbie Podcast,</span> a podcast about people from
+                  all stages of their coding journey.
+                </a>
+              </li>
+              <li>
+                <a href="https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/">
+                  <div>Cureently Completing:</div>
+                  <span>Project Euler,</span> a series of challenging
+                  mathematical/computer programming problems.
+                </a>
+              </li>
+              <li>
+                <a href="https://www.stardewvalley.net/">
+                  <div>Currently Playing:</div>
+                  <span>Stardew Valley,</span> a simple game about escaping from
+                  modern life.
+                </a>
+              </li>
+            </ul>
           </section>
         </main>
       </div>
