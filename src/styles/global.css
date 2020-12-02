@@ -61,6 +61,10 @@ footer nav a {
   justify-content: center;
 }
 
+.current ul {
+  list-style: none;
+}
+
 .current h2 {
   font-size: 3rem;
   text-align: center;
