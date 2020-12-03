@@ -258,3 +258,10 @@ Article page css
 .AnyClassForTransition {
   right: 10px;
 }
+
+/* Media queries */
+@media (max-width: 1000px) {
+  * {
+    color: red;
+  }
+}
