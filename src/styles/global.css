@@ -63,6 +63,9 @@ footer nav a {
 
 .current ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .current h2 {
