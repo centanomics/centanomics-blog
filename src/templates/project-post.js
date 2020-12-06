@@ -22,7 +22,7 @@ export default ({ data, location }) => {
               display: flex;
               flex-wrap: wrap;
               align-items: center;
-              font-size: 2rem;
+              font-size: 3rem;
               position: relative;
               border-radius: 10px 10px 0 0;
             `}
