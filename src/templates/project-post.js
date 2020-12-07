@@ -34,7 +34,7 @@ export default ({ data, location }) => {
             top: 0;
             left: 0;
             cursor: pointer;
-            padding: 8px;
+            padding: 16px;
           `}
           className={`back-button ${post.frontmatter.dark}`}
           >{'<'} Go Back</button>
