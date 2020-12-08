@@ -15,13 +15,9 @@ Penny is my discord bot that I made using javascript and the discordjs node modu
 
 ### Tech Stack
 
-For this project I used the MERN stack, more specifically:
+For this project I mainly focused on javascript and the appropriate npm packages like discord.js. There is an express server setup, which I do plan on expanding on in the future.
 
-- [React](https://reactjs.org/)
-- [Node.js](https://nodejs.org/)
-- [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Mongoose](https://mongoosejs.com/)
-- and various npm packages that aided in security, including:
-  - [bcrypt.js](https://www.npmjs.com/package/bcryptjs)
-  - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- [discord.js](https://discord.js.org/#/)
+- [express.js](https://expressjs.com/)
+- [node.js](https://nodejs.org/)
+
