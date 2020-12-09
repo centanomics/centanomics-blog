@@ -21,4 +21,12 @@ Read more about how to bullet journal [here](https://bulletjournal.com/pages/lea
 
 ### Tech Stack
 
-This project is still in the planning stages so what I'll be using is TBD
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+
+- and various npm packages that aided in security, including:
+  - [bcrypt.js](https://www.npmjs.com/package/bcryptjs)
+  - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
