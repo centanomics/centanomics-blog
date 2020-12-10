@@ -17,7 +17,5 @@ This was a project I worked on with two other people for a Hackathon back in Dec
 
 For this project I used Gatsby as my static site generator. This includes React and GraphQL.
 
-- [React](https://reactjs.org/)
-- [Gatsby](https://www.gatsbyjs.org/)
-- [Graph-ql](https://graphql.org/)
-- [React Spring](https://www.react-spring.io/)
+- [Javascript](https://www.javascript.com/)
+- [Socket.io](https://socket.io/)
