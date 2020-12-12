@@ -11,11 +11,11 @@ description:
 
 ---
 
-This project I focused on learning gatsby. I implemented what I learned in the tutorual on the website. I also wanted to practice some animations using React Spring which I sprinkled throughout this project!
+This project I focused on learning gatsby. I implemented what I learned in the tutorual on the website. I also wanted to practice some animations using React Spring which I sprinkled throughout this project! I also have a blog attached to another site created using a generator.
 
 ### Tech Stack
 
-For this project I used Gatsby as my static site generator. This includes React and GraphQL. As mentioned before I also used React Spring which allows me to add animations to my components
+For this project I used Gatsby as my static site generator. This includes React and GraphQL. As mentioned before I also used React Spring which allows me to add animations to my components. 
 
 - [React](https://reactjs.org/)
 - [Gatsby](https://www.gatsbyjs.org/)
