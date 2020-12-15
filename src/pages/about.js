@@ -83,10 +83,9 @@ export default () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/">
+                <a href="https://www.codewars.com/">
                   <div>Cureently Completing:</div>
-                  <span>Project Euler,</span> a series of challenging
-                  mathematical/computer programming problems.
+                  <span>Codewars,</span> a series of programming challenges to practice my skills
                 </a>
               </li>
               <li>
