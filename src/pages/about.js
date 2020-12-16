@@ -72,7 +72,7 @@ export default () => {
               <li>
                 <a href="https://bulletjournal.com/">
                   <div>Currently Building:</div>
-                  <span>Bujo,</span> an application based off the Bujo Method.
+                  <span>Cent-Jitsu,</span> an application based off the Club Penguin game Card-Jitsu.
                 </a>
               </li>
               <li>
