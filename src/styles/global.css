@@ -188,15 +188,6 @@ footer {
   flex-direction: row;
 }
 
-@media (max-width: 800px) {
-  #footer-span::after {
-    content: "below";
-  }
-  footer {
-    flex-direction: column;
-  }
-}
-
 /* 
 Article page css
 */
@@ -264,7 +255,10 @@ Article page css
 
 /* Media queries */
 @media (max-width: 1000px) {
-  * {
-    color: red;
+  #footer-span::after {
+    content: "below";
+  }
+  footer {
+    flex-direction: column;
   }
 }
