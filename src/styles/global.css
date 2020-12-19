@@ -261,4 +261,13 @@ Article page css
   footer {
     flex-direction: column;
   }
+
+  #intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #intro > div {
+    padding-top: 32px;
+  }
 }
