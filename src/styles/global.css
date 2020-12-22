@@ -254,7 +254,14 @@ Article page css
 }
 
 /* Media queries */
-@media (max-width: 1010) {
+@media (max-width: 1050) {
+  .frame {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 1000) {
   #footer-span::after {
     content: "below";
   }
