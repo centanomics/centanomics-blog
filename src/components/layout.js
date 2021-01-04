@@ -8,7 +8,13 @@ import Footer from "./footer"
 
 const MyCustomReactComponent = () => {
   return (
-    <div><FaArrowUp css={css`
+    <div
+      css={css`
+      width: 100%;
+      height: 100%;
+        background-color: black;
+      `}
+    ><FaArrowUp css={css`
       color: #eac435
     `} /></div>
   )
