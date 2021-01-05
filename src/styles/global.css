@@ -261,7 +261,7 @@ Article page css
   }
 }
 
-@media (max-width: 1000) {
+@media (max-width: 1010) {
   #footer-span::after {
     content: "below";
   }
