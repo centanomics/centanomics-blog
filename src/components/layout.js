@@ -15,7 +15,7 @@ const MyCustomReactComponent = () => {
         background-color: black;
       `}
     ><FaArrowUp css={css`
-      color: #eac435
+      color: black
     `} /></div>
   )
 }
