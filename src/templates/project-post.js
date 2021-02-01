@@ -47,6 +47,7 @@ export default ({ data, location }) => {
                 height: 300px;
                 object-fit: cover;
               `}
+              loading='lazy'
               />
             <h1>{post.frontmatter.title}</h1>
             <h2
