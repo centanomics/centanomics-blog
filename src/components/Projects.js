@@ -101,7 +101,7 @@ const Projects = () => {
                       : { backgroundSize: size3.interpolate(v => `${v}%`) }
                   }
                 >
-                  <div className={`project ${node.frontmatter.dark}`}>
+                  <div className={`project ${node.frontmatter.dark} lazy`}>
                     <span>{node.frontmatter.description}</span>
                     <p>{node.frontmatter.title}</p>
                     <small>{node.frontmatter.startDate}</small>
