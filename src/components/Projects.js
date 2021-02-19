@@ -65,7 +65,7 @@ const Projects = () => {
                   margin-bottom: 0;
                 `}
               >
-                <animated.img
+                <animated.div
                   css={css`
                     background: url(${node.frontmatter.image});
                     background-size: 100%;
@@ -106,7 +106,7 @@ const Projects = () => {
                     <p>{node.frontmatter.title}</p>
                     <small>{node.frontmatter.startDate}</small>
                   </div>
-                </animated.img>
+                </animated.div>
               </Link>
             </article>
           )
