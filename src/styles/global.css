@@ -261,7 +261,7 @@ Article page css
   }
 } */
 
-@media (max-width: 1000) {
+/* @media (max-width: 1000) {
   #footer-span::after {
     content: "below";
   }
@@ -277,4 +277,4 @@ Article page css
   #intro > div {
     padding-top: 32px;
   }
-}
+} */
